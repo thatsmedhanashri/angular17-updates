@@ -1,0 +1,90 @@
+<!-- Input Output decorator -->
+<!-- <p>home works!</p>
+<br><br>
+<p>Person Data:</p>
+<p>Name: {{personData.name}}</p>
+<p>Emploee Id: {{personData.employeeId}}</p>
+<br><br>
+<p>Course Name: {{course_name}}</p> -->
+<!-- <app-child1 [data1]="child1Data" (data2)="getData($event)" (courseName)="getCourseName($event)"/> -->
+
+<!-- for loop -->
+<!-- Angular 17 - @for -->
+<div>
+    @for (item of arrayNames; track item.id; let index = $index; let count = $count;
+    let first = $first; let last = $last; let even = $even; let odd = $odd){
+        <h2 [class.even]="even" [class.odd]="odd">Index: {{index}}</h2>
+        <h2>Count: {{count}}</h2>
+        <h2 style="color: blue;">First: {{first}}</h2>
+        <h2 style="color: brown;">Last: {{last}}</h2>
+        <app-child1 [loopData]="item?.name"  />
+    }
+    @empty {
+        <h1>Data not found!</h1>
+    }
+</div>
+
+<!-- ngFor -->
+<!-- <div *ngFor="let item of arrayNames; index as index; count as count; first as first; last as last; even as even; odd as odd">
+    <h2 [class.even]="even" [class.odd]="odd">Index: {{index}}</h2>
+    <h2>Count: {{count}}</h2>
+    <h2 style="color: blue;">First: {{first}}</h2>
+    <h2 style="color: brown;">Last: {{last}}</h2>
+    <app-child1  [loopData]="item?.name"  />
+</div> -->
+
+<!-- Angular 17 @if, @else if, @else -->
+<div style="background-color: aqua;">
+    @if(employeeId == 1) {
+        <h1>Employee's id is 1</h1>
+    }
+    @else if(employeeId == 2){
+        <h1>Employee's id is 2</h1>
+    }
+    @else {
+        <h1>Employee's id is other than 1 and 2</h1>
+    }
+</div>
+
+<!-- ngIf and else -->
+<!-- <div style="background-color: aqua;">
+    <h1 *ngIf="isIdOne(); else notOne">Employee's id is 1</h1>
+    <ng-template #notOne><p>Employee's id is other than 1</p></ng-template>
+</div> -->
+
+<!-- Checking ngClass -->
+<div [ngClass]="applyClass()">
+    <h1>Hello Angular Users!</h1>
+</div>
+<!-- <div [ngClass]="border ? 'borderClass' : 'backColor'">
+    <h1>Hello Angular Users!</h1>
+</div> -->
+
+<!-- Checking ngStyle -->
+<div [ngStyle]="{'background-color':'#808080', 'padding':'50px'}">
+    <h1>Checking ngStyle..</h1>
+</div>
+<!-- <div [ngStyle]="applyStyles()">
+    <h1>Checking ngStyle..</h1>
+</div> -->
+
+<!-- Checking @switch, @case, @default -->
+<div>
+    @switch(courseId) {
+        @case(1) {
+            <h1>COURSE 1</h1>
+        }
+        @case(2) {
+            <h1>COURSE 2</h1>
+        }
+        @default {
+            <h1>DEFAULT CASE</h1>
+        }
+    }
+</div>
+
+<!-- <div [ngSwitch]="courseId">
+    <h1 *ngSwitchCase="1">COURSE 1</h1>
+    <h1 *ngSwitchCase="2">COURSE 2</h1>
+    <h1 *ngSwitchDefault>DEFAULT CASE</h1>
+</div> -->

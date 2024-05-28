@@ -1,0 +1,8 @@
+<p>child works!</p>
+<!-- <h1 *ngIf="flag; else flagfalse">Working on Angular Templates.</h1>
+<ng-template #flagfalse>
+    <ng-container *ngTemplateOutlet="templateInstance; context:{description: 'Checking context attribute...'}"></ng-container>
+</ng-template> -->
+<div *ngIf="templateInstance">
+    <ng-container *ngTemplateOutlet="templateInstance; context:{description: 'Checking data passing......'}"></ng-container>
+</div>

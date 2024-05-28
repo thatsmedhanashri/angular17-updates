@@ -1,0 +1,12 @@
+<!-- <div style="background-color:bisque; border: solid 2px #808080; padding: 50px;">
+    <p>Student name: {{student_.name}}</p>
+    <ng-content select="p"></ng-content>
+</div> -->
+
+<!-- Another way -->
+<div style="background-color:bisque; border: solid 2px #808080; ">
+    <p #name>Student name: {{student_.name}}</p>
+    <ng-content select=".addPadding"></ng-content>
+    <ng-content select=".class2"></ng-content>
+    <ng-content></ng-content>
+</div>

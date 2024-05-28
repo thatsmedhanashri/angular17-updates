@@ -1,0 +1,19 @@
+<p>inbuilt-pipes works!</p>
+<p>Date: {{date | date: 'dd/mm/yyyy'}}</p>
+<p>{{title | uppercase}}</p>
+<p>{{title | lowercase}}</p>
+<p>{{title | titlecase}}</p>
+<p>Selected Number: {{myNum | number: '4.2-5'}}</p>
+<p>Check percent: {{myNum | percent}}</p>
+<p>Check currency: {{myNum | currency:'INR'}}</p>
+<p>Student Info: {{obj | json}}</p>
+<div>
+    <h2>Checking slice pipe</h2>
+    @for(student of arr | slice:0-1; track $index){
+        <p>Name: {{student.name}}</p>
+    }
+    <h2>Checking keyalue pipe</h2>
+    @for(student of arr | keyvalue; track $index){
+        <p>Key: {{student.key}} </p>
+    }
+</div>

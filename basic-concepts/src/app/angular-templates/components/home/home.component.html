@@ -1,0 +1,22 @@
+<p>home works!</p>
+<h1 *ngIf="flag; else flagfalse">Working on Angular Templates.</h1>
+<ng-template #flagfalse>
+    <h1>Data not available.</h1>
+</ng-template>
+
+<!-- Loading ng-template using ngTemplateOutlet and ng-content level elements -->
+<ng-template #checkoutlet let-info="description">
+    <h1>Checking ngTemplateOutlet</h1>
+    <h1>Description: {{info}}</h1>
+</ng-template>
+
+<!-- <div *ngTemplateOutlet="checkoutlet; context:{description: 'Checking context attribute...'}"></div> -->
+<!-- Better option -->
+<ng-container *ngTemplateOutlet="checkoutlet; context:{description: 'Checking context attribute...'}"></ng-container>
+
+<br>
+<br>
+<br>
+<div style="background-color: brown; border: solid 2px #808080; padding: 10px">
+    <app-child [templateInstance]="checkoutlet"></app-child>
+</div>
