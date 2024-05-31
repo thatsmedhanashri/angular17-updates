@@ -21,5 +21,9 @@ export const routes: Routes = [
     {
         path: 'templates',
         loadChildren: () => import('./angular-templates/angular-templates.module').then(m => m.AngularTemplatesModule)
+    },
+    {
+        path: 'directives',
+        loadChildren: () => import('./angular-directives/angular-directives.module').then(m => m.AngularDirectivesModule)
     }
 ];
