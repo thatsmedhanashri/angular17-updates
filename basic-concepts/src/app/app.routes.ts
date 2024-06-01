@@ -29,5 +29,9 @@ export const routes: Routes = [
     {
         path: 'encapsulation',
         loadChildren: () => import('./encapsulation/encapsulation.module').then(m => m.EncapsulationModule)
+    },
+    {
+        path: 'services',
+        loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
     }
 ];

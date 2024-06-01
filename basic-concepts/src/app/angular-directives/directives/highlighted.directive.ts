@@ -1,16 +1,18 @@
-import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } from '@angular/core';
+import { Directive, EventEmitter, Host, HostBinding, HostListener, Input, Output } from '@angular/core';
+import { Service1Service } from '../../services/custom-services/service1.service';
 
 @Directive({
   selector: '[appHighlighted]',
   standalone: true,
-  exportAs: 'hl'
+  exportAs: 'hl',
+  providers: [Service1Service]
 })
 export class HighlightedDirective {
 
   @Output()
   event1Value = new EventEmitter()
   
-  constructor() { 
+  constructor(@Host() private service1: Service1Service) { 
     console.log("This is an attribute directive")
     // console.log("Highlighted directive called...")
   }
@@ -20,15 +22,25 @@ export class HighlightedDirective {
   //   return 'checking-directives'
   // }
 
-  @HostBinding('class.checking-directives')
-  get cssClasses(){
-    return true
+  // @HostBinding('class.appHighlighted')
+  // get cssClasses(){
+  //   return true
+  // }
+
+  @HostBinding('style.border')
+  get xys(){
+    return 'solid 5px #aabbcc'
   }
 
-  // @HostBinding('style.border')
-  // get xys(){
-  //   return 'solid 2px #aabbcc'
-  // }
+  @HostBinding('style.background-color')
+  get xys1(){
+    return 'yellow'
+  }
+
+  @HostBinding('style.padding')
+  get xys2(){
+    return '20px'
+  }
 
   // @HostBinding('attr.disabled')
   // get dfgh(){
