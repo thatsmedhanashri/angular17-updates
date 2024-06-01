@@ -25,5 +25,9 @@ export const routes: Routes = [
     {
         path: 'directives',
         loadChildren: () => import('./angular-directives/angular-directives.module').then(m => m.AngularDirectivesModule)
+    },
+    {
+        path: 'encapsulation',
+        loadChildren: () => import('./encapsulation/encapsulation.module').then(m => m.EncapsulationModule)
     }
 ];
