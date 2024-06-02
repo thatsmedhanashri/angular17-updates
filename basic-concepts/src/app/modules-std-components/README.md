@@ -63,8 +63,11 @@ export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideClientHydration(), provideAnimationsAsync()]
 };
 
-provideRouter(routes):
+provideRouter(routes)
 Sets up providers necessary to enable Router functionality for the application. Allows to configure a set of routes as well as extra features that should be enabled.
 
 provideClientHydration()
 Hydration is the process that restores the server side rendered application on the client. This includes things like reusing the server rendered DOM structures, persisting the application state, transferring application data that was retrieved already by the server, and other processes.
+
+provideAnimationsAsync()
+Imports BrowserAnimationsModule
