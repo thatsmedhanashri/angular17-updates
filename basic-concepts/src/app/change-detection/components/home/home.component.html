@@ -1,0 +1,12 @@
+<p>home works!</p>
+<input #fruit type="text" myAtt="attribute_value"/>
+<br><br>
+<button (click)="addFruit(fruit.value)">Add Fruit</button>
+<br>
+<h1>Showing fruits in child - Default Change Detection</h1>
+<app-child [fruitsData]="fruits"></app-child>
+<br>
+<h1>Showing fruits in child1 - OnPush Change Detection</h1>
+<!-- <app-child1 [fruitsData1]="fruits" [student_info]="service.user$ | async"></app-child1> -->
+<!-- <app-child1 [fruitsData1]="fruits" [student_info]="studentInfo"></app-child1> -->
+<app-child1 ></app-child1>

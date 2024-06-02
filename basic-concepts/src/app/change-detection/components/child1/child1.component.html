@@ -1,0 +1,19 @@
+<p>child1 works!</p>
+<br>
+@for(frt of fruitsData1; track $index){
+    <li>{{frt}}</li>
+}
+<br><br>
+<button (click)="check1_()">Click Me</button>
+<br><br>
+<!--  ChangeDetectorRef markForCheck -->
+<h1>Checking ChangeDetectorRef's markForCheck</h1>
+<h2>Student name - {{student_data.name}}</h2>
+<!-- Getting data from parent component as observable -->
+<!-- <h2>Student name - {{student_info.name}}</h2> -->
+<br><br>
+<!-- Getting data in this component itself -->
+<!-- <div *ngIf="service.user$ | async as student1">
+    <h2>Student surname - {{student1.surname}}</h2>
+    <h2>Student role number - {{student1.roleNo}}</h2>
+</div> -->

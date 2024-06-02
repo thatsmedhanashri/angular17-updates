@@ -33,5 +33,9 @@ export const routes: Routes = [
     {
         path: 'services',
         loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
+    },
+    {
+        path: 'change-detection',
+        loadChildren: () => import('./change-detection/change-detection.module').then(m => m.ChangeDetectionModule)
     }
 ];

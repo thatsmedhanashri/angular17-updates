@@ -40,7 +40,7 @@ When we provide service at component level, when component gets destroy the serv
   providedIn: 'root'
 })
 
-This a Tree-Shekeable approach. With this approach when we use it in any component the service will get load in the bundle only if it is used in that component. We should use it in singleton services or it does not have any state.
+This a Tree-Shekeable approach. With this approach when we use it in any component the service will get load in the bundle only if it is used in that component, so this enhances the performance. We should use it in singleton services or it does not have any state.
 
 We should use providers if the service contains component specific state data.
 
