@@ -37,5 +37,9 @@ export const routes: Routes = [
     {
         path: 'change-detection',
         loadChildren: () => import('./change-detection/change-detection.module').then(m => m.ChangeDetectionModule)
+    },
+    {
+        path: 'life-cycle',
+        loadChildren: () => import('./comp-life-cycle/comp-life-cycle.module').then(m => m.CompLifeCycleModule)
     }
 ];
