@@ -41,5 +41,9 @@ export const routes: Routes = [
     {
         path: 'life-cycle',
         loadChildren: () => import('./comp-life-cycle/comp-life-cycle.module').then(m => m.CompLifeCycleModule)
+    },
+    {
+        path: 'defer',
+        loadChildren: () => import('./checking-defer/checking-defer.module').then(m => m.CheckingDeferModule)
     }
 ];

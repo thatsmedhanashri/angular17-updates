@@ -1,0 +1,46 @@
+<h1>home works!</h1>
+<!-- <div style="width: 100vw; height: 100vh; border: solid 5px #808080; margin: 10px;"></div> -->
+
+<!-- Checking interaction trigger -->
+<div style="padding:50px; border: solid 5px #808080; margin: 10px;" #loadcontent>
+<input #input1 placeholder="please update input to load content inside the defer block"/>
+<br><br><br>
+<button #prefetchcontent (click)="prefetchContent()">Prefetch content inside the defer block</button>
+<button #showcontent (click)="showContent()">Show content inside the defer block</button>
+</div>
+<!-- @defer(on timer(15s); prefetch on timer(10s)){
+    <app-child></app-child>
+} -->
+
+<!-- <h1 #check>Checking viewport trigger</h1>
+<br><br>
+@defer(on viewport(check); prefetch on idle){
+    <app-child></app-child>
+} -->
+
+<!-- Checking interaction trigger -->
+<!-- @defer(on interaction(showcontent); prefetch on interaction(input1)){
+    <app-child></app-child>
+} -->
+
+<!-- checking on hover trigger -->
+<!-- @defer(on interaction(showcontent); prefetch on hover(loadcontent)){
+    <app-child></app-child>
+} -->
+
+<!-- checking custom trigger -->
+@defer(when showcontent; prefetch when prefetchcontent){
+    <app-child></app-child>
+}
+@defer(on interaction(showcontent); prefetch on interaction(input1)){
+    <app-child></app-child>
+}
+@placeholder(){
+    <h2>Placeholder Child Component...</h2>
+}
+@loading(minimum 3s; after 1s){
+    <h2>Actually loading child component...</h2>
+}
+@error {
+    <h2>Something went wrong...</h2>
+}
