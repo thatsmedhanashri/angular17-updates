@@ -45,5 +45,9 @@ export const routes: Routes = [
     {
         path: 'defer',
         loadChildren: () => import('./checking-defer/checking-defer.module').then(m => m.CheckingDeferModule)
+    },
+    {
+        path: 'signals',
+        loadChildren: () => import('./checking-signals/checking-signals.module').then(m => m.CheckingSignalsModule)
     }
 ];
