@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Module1PathmatchRoutingModule } from './module1-pathmatch-routing.module';
+import { SsrIntroRoutingModule } from './ssr-intro-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    Module1PathmatchRoutingModule
+    SsrIntroRoutingModule
   ]
 })
-export class Module1PathmatchModule { }
+export class SsrIntroModule { }

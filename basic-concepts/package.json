@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-concepts": "node dist/angular-concepts/server/server.mjs"
+    "serve:ssr:angular-concepts": "node dist/angular-concepts/server/server.mjs",
+    "serve:prerender": "http-server -c-l dist/angular-concepts/browser",
+    "prerender": "ng run angular-concepts:prerender"
   },
   "private": true,
   "dependencies": {
